@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna CNC Design Studio</title>
+<meta name="description" content="Professional CNC Router 2D and 3D designs, wooden door carving, decorative panels, furniture designs and CNC TAP files.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#0c0c0c;color:#fff;line-height:1.6}
+:root{--gold:#d6ad60;--dark:#0c0c0c;--light:#f4eee3}
+header{position:sticky;top:0;background:#101010f5;z-index:10;border-bottom:1px solid #393020}
+nav{max-width:1200px;margin:auto;padding:17px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:19px;font-weight:bold;color:var(--gold)}
+nav a{color:#fff;text-decoration:none;margin:0 9px;font-size:14px}
+nav a:hover{color:var(--gold)}
+button,.btn{background:var(--gold);color:#111;border:0;padding:12px 20px;border-radius:4px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.hero{min-height:650px;display:flex;align-items:center;padding:80px 8%;background:linear-gradient(90deg,#090909 15%,#090909d9 55%,#09090955),url('https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:700px}
+.tag{color:var(--gold);letter-spacing:4px;font-size:13px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:20px 0}
+h1 span,h2 span{color:var(--gold)}
+.hero p{font-size:18px;color:#ddd;margin-bottom:28px;max-width:600px}
+section{padding:85px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:36px;margin-bottom:10px}
+.section-title p{color:#aaa}
+.grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#171717;border:1px solid #30291e;border-radius:8px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card-body{padding:20px}
+.card h3{color:var(--gold);margin-bottom:8px}
+.card p{color:#bbb;font-size:14px}
+.dark-section{background:#141414}
+.about{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-image{min-height:370px;border-radius:8px;background:url('https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=85') center/cover}
+.about h2{font-size:38px;margin-bottom:18px}
+.about p{color:#bbb;margin-bottom:15px}
+.service{padding:25px;border:1px solid #393020;background:#171717;border-radius:7px}
+.service h3{color:var(--gold);margin-bottom:10px}
+.service p{color:#bbb;font-size:14px}
+.contact-box{max-width:850px;margin:auto;background:#171717;border:1px solid #40351f;padding:35px;border-radius:8px}
+form{display:grid;gap:15px}
+input,textarea,select{width:100%;padding:14px;background:#0d0d0d;border:1px solid #51452e;color:white;border-radius:4px;font:inherit}
+textarea{min-height:120px;resize:vertical}
+form label{color:#ddd;font-size:14px}
+.contact-buttons{display:flex;gap:15px;flex-wrap:wrap;margin-top:25px}
+footer{text-align:center;padding:30px;background:#080808;color:#aaa;border-top:1px solid #332b1e}
+footer span{color:var(--gold)}
+.whatsapp{position:fixed;bottom:22px;right:22px;background:#25d366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:20;box-shadow:0 4px 15px #0008}
+@media(max-width:750px){
+ nav{flex-wrap:wrap}
+ nav div.links{width:100%;display:flex;justify-content:center;flex-wrap:wrap}
+ nav a{margin:5px;font-size:12px}
+ .hero{min-height:570px;padding:60px 7%}
+ section{padding:65px 6%}
+ .about{grid-template-columns:1fr}
+ .about-image{min-height:260px}
+ .contact-box{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">KRISHNA CNC</div>
+<div class="links">
+<a href="#home" data-en="Home" data-hi="होम">Home</a>
+<a href="#services" data-en="Services" data-hi="सेवाएं">Services</a>
+<a href="#portfolio" data-en="Portfolio" data-hi="पोर्टफोलियो">Portfolio</a>
+<a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
+<a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+</div>
+<button onclick="toggleLanguage()" id="langBtn">हिन्दी</button>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="tag">CREATIVITY • PRECISION • DESIGN</div>
+<h1>Krishna <span>CNC</span><br>Design Studio</h1>
+<p data-en="Turning Your Ideas into Beautiful CNC Designs." data-hi="आपके विचारों को खूबसूरत CNC डिज़ाइन में बदलते हैं।">Turning Your Ideas into Beautiful CNC Designs.</p>
+<a href="#portfolio" class="btn" data-en="Explore Designs" data-hi="डिज़ाइन देखें">Explore Designs</a>
+<a href="#contact" class="btn" style="margin-left:10px;background:transparent;border:1px solid var(--gold);color:var(--gold)" data-en="Get a Quote" data-hi="कोटेशन पाएं">Get a Quote</a>
+</div>
+</section>
+
+<section id="services">
+<div class="section-title">
+<h2>Our <span>Services</span></h2>
+<p data-en="Creative CNC solutions for your ideas." data-hi="आपके विचारों के लिए क्रिएटिव CNC समाधान।">Creative CNC solutions for your ideas.</p>
+</div>
+<div class="grid">
+<div class="service"><h3>2D CNC Design</h3><p>Accurate 2D patterns and cutting designs for CNC routers.</p></div>
+<div class="service"><h3>3D CNC Design</h3><p>Detailed 3D carving designs for doors, panels and furniture.</p></div>
+<div class="service"><h3>CNC TAP Files</h3><p>Toolpath and TAP file creation for CNC router work.</p></div>
+<div class="service"><h3>Photo to CNC Design</h3><p>Custom designs recreated from your reference photos.</p></div>
+<div class="service"><h3>Furniture Design</h3><p>Custom furniture, decorative panels and wooden designs.</p></div>
+<div class="service"><h3>Custom Carving</h3><p>Mandir, jali, doors and ornamental carving designs.</p></div>
+</div>
+</section>
+
+<section class="dark-section" id="portfolio">
+<div class="section-title">
+<h2>Our <span>Design Categories</span></h2>
+<p>Explore our CNC design world.</p>
+</div>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Wood interior"><div class="card-body"><h3>Wooden Door Designs</h3><p>Elegant decorative wooden design concepts.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Decorative panels"><div class="card-body"><h3>3D Decorative Panels</h3><p>Detailed patterns and artistic panel designs.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Furniture"><div class="card-body"><h3>Furniture Designs</h3><p>Modern furniture and custom CNC concepts.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Interior carving"><div class="card-body"><h3>MDF & HDHMR Designs</h3><p>Decorative carving concepts for board materials.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=80" alt="Interior decor"><div class="card-body"><h3>Mandir Designs</h3><p>Custom pooja space and mandir design concepts.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80" alt="Decorative interior"><div class="card-body"><h3>Jali Designs</h3><p>Decorative partition and jali design concepts.</p></div></div>
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<div class="about-image"></div>
+<div>
+<div class="tag">ABOUT THE DESIGNER</div>
+<h2>Meet <span>Krishna</span></h2>
+<p>Welcome to Krishna CNC Design Studio. We create creative and detailed CNC router designs for wooden doors, furniture, decorative panels and custom projects.</p>
+<p>Our focus is on design quality, precision and turning customer ideas into beautiful digital designs.</p>
+<p><b>Location:</b> Kharar, Punjab, India</p>
+<p><b>Experience:</b> 2.5 Years in CNC Design</p>
+<a href="https://www.instagram.com/krishna_cnc_design" target="_blank" class="btn">Follow on Instagram</a>
+</div>
+</div>
+</section>
+
+<section class="dark-section" id="contact">
+<div class="section-title">
+<h2>Let's Create <span>Together</span></h2>
+<p>Send your project details and get a custom quotation.</p>
+</div>
+<div class="contact-box">
+<form id="enquiryForm">
+<label>Your Name<input id="name" type="text" placeholder="Enter your name" required></label>
+<label>Email Address<input id="email" type="email" placeholder="Enter your email"></label>
+<label>Country<input id="country" type="text" placeholder="Your country"></label>
+<label>Service Required
+<select id="service">
+<option>CNC 2D Design</option>
+<option>CNC 3D Design</option>
+<option>CNC TAP File</option>
+<option>Wooden Door / Panel Design</option>
+<option>Furniture / Jali / Mandir Design</option>
+<option>Custom Design from Photo</option>
+</select></label>
+<label>Project Details<textarea id="details" placeholder="Describe your design requirements..." required></textarea></label>
+<label>Reference Image (optional)<input id="reference" type="file" accept="image/*"></label>
+<button type="submit">Send Enquiry on WhatsApp</button>
+<p style="color:#aaa;font-size:12px">Note: If you select a reference image, attach it manually in WhatsApp after the chat opens.</p>
+</form>
+<div class="contact-buttons">
+<a class="btn" href="https://www.instagram.com/krishna_cnc_design" target="_blank">Instagram</a>
+<a class="btn" href="mailto:kri7717489217@gmail.com">Email Us</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 <span>Krishna CNC Design Studio</span>. All Rights Reserved.</p>
+<p>Designed with creativity in Punjab, India.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917717489217" target="_blank">WhatsApp Us</a>
+
+<script>
+let hindi=false;
+function toggleLanguage(){
+ hindi=!hindi;
+ document.querySelectorAll("[data-en]").forEach(el=>{
+  el.textContent=hindi?el.dataset.hi:el.dataset.en;
+ });
+ document.getElementById("langBtn").textContent=hindi?"English":"हिन्दी";
+ document.documentElement.lang=hindi?"hi":"en";
+}
+document.getElementById("enquiryForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("name").value;
+ const email=document.getElementById("email").value;
+ const country=document.getElementById("country").value;
+ const service=document.getElementById("service").value;
+ const details=document.getElementById("details").value;
+ const file=document.getElementById("reference").files[0];
+ const message=`Hello Krishna CNC Design Studio!
+Name: ${name}
+Email: ${email}
+Country: ${country}
+Service: ${service}
+Project Details: ${details}
+${file?"I have a reference image to attach separately on WhatsApp.":""}`;
+ window.open("https://wa.me/917717489217?text="+encodeURIComponent(message),"_blank");
+});
+</script>
+</body>
+</html>

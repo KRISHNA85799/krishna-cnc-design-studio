@@ -4,275 +4,770 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishna CNC Design Studio</title>
-<meta name="description" content="Professional CNC Router 2D and 3D carving designs, wooden doors, MDF, HDHMR, mandir, jali and furniture designs.">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--gold:#c9a45c;--black:#101010;--white:#fff}
-body{font-family:Arial,sans-serif;background:#fff;color:#222}
-header{background:#111;color:white;position:sticky;top:0;z-index:99}
-nav{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 20px}
-.logo{font-size:23px;font-weight:bold;color:var(--gold)}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-nav a:hover{color:var(--gold)}
-button,.btn{background:var(--gold);border:0;padding:13px 22px;color:#111;font-weight:bold;text-decoration:none;cursor:pointer;border-radius:3px}
-.hero{min-height:590px;background:linear-gradient(90deg,#000c,#0005),url('https://cdn.ai-zero.ai/public/img/2025-09-12/4414489863_0.png') center/cover;display:flex;align-items:center;color:white;padding:60px 8%}
-.hero-content{max-width:700px}
-.hero small{color:var(--gold);letter-spacing:4px}
-.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.1;margin:20px 0}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:19px;margin-bottom:28px;color:#eee}
-section{padding:75px 5%}
-.title{text-align:center;margin-bottom:38px}
-.title h2{font-size:34px;margin-bottom:10px}
-.title span{color:#b18a43}
-.title p{color:#777}
-.intro{max-width:850px;margin:auto;text-align:center;color:#666;line-height:1.8}
-.dark{background:#151515;color:white}
-.grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:white;border:1px solid #ddd;overflow:hidden;transition:.3s}
-.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px #0002}
-.card img{width:100%;height:220px;object-fit:cover;display:block}
-.card-info{padding:15px}
-.card-info h3{font-size:17px;margin-bottom:7px}
-.card-info p{font-size:13px;color:#777;margin-bottom:13px}
-.card-info a{display:inline-block;background:#161616;color:#fff;text-decoration:none;padding:10px 13px;font-size:12px}
-.dark .card{background:#222;border-color:#393939}
-.dark .card-info p{color:#bbb}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1200px;margin:auto}
-.service{padding:30px;border:1px solid #ddd;text-align:center}
-.service h3{color:#a77d34;margin-bottom:12px}
-.service p{color:#777;font-size:14px;line-height:1.7}
-.steps{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}
-.step{padding:28px;background:#f6f3ed}
-.step strong{font-size:35px;color:#b18a43}
-.step h3{margin:12px 0}
-.step p{color:#777;font-size:14px}
-.about{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about img{width:100%;height:400px;object-fit:cover}
-.about p{color:#777;line-height:1.8;margin:15px 0}
-.contact{background:#151515;color:white}
-.form{max-width:750px;margin:auto;display:grid;gap:15px}
-input,select,textarea{width:100%;padding:14px;border:1px solid #555;background:#222;color:white;font:inherit}
-textarea{height:120px}
-.form label{font-size:14px;color:#ddd}
-footer{background:#080808;color:#aaa;text-align:center;padding:35px 15px;line-height:2}
-footer span{color:var(--gold)}
-.wa{position:fixed;right:20px;bottom:20px;background:#20c768;color:white;text-decoration:none;padding:15px 20px;border-radius:40px;font-weight:bold;z-index:100}
-@media(max-width:900px){
- .grid{grid-template-columns:repeat(2,1fr)}
- .services{grid-template-columns:repeat(2,1fr)}
- nav{flex-wrap:wrap;gap:15px}
- nav .links{width:100%;display:flex;flex-wrap:wrap;gap:12px}
- nav a{margin:0}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-@media(max-width:550px){
- .grid,.services,.steps,.about{grid-template-columns:1fr}
- .hero{min-height:520px}
- section{padding:55px 5%}
- .card img{height:230px}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+:root {
+    --gold: #d6ad60;
+    --black: #111;
+    --light: #eee;
+}
+
+header {
+    background: #080808;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #383027;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 65px);
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    padding: 14px 24px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+section {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--gold);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service-box {
+    background: #1d1d1d;
+    padding: 30px 20px;
+    border: 1px solid #383027;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-box h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.service-box p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* CATEGORY GALLERY */
+
+.category {
+    margin-top: 55px;
+}
+
+.category h3 {
+    color: var(--gold);
+    font-size: 25px;
+    margin-bottom: 22px;
+    border-left: 4px solid var(--gold);
+    padding-left: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #1b1b1b;
+    border: 1px solid #383027;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    background: #29251f;
+}
+
+.no-image {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #c9ad78;
+    background: linear-gradient(135deg, #29251f, #111);
+    font-size: 14px;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h4 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.card-info a {
+    display: block;
+    text-align: center;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.card-info a:hover {
+    background: white;
+}
+
+/* ABOUT */
+
+.about {
+    background: #1b1b1b;
+    text-align: center;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.contact {
+    background: #171717;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-box input,
+.contact-box select,
+.contact-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 9px 0;
+    border: 1px solid #555;
+    background: #222;
+    color: white;
+    border-radius: 4px;
+}
+
+.contact-box button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #080808;
+    color: #aaa;
+    line-height: 2;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    z-index: 200;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .card img,
+    .no-image {
+        height: 150px;
+    }
+
+    .card-info {
+        padding: 10px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<nav>
-<div class="logo">KRISHNA CNC</div>
-<div class="links">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#designs">Design Gallery</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-<button onclick="toggleLang()" id="language">हिन्दी</button>
-</nav>
+    <div class="logo">KRISHNA CNC</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Designs</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero" id="home">
-<div class="hero-content">
-<small>PRECISION • CREATIVITY • CRAFTSMANSHIP</small>
-<h1>Krishna <span>CNC</span><br>Design Studio</h1>
-<p data-en="Turning Your Ideas into Beautiful CNC Designs." data-hi="आपके विचारों को खूबसूरत CNC डिज़ाइन में बदलते हैं।">Turning Your Ideas into Beautiful CNC Designs.</p>
-<a class="btn" href="#designs">Explore Designs</a>
-<a class="btn" href="#contact">Get a Quote</a>
+<!-- HERO SECTION -->
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>Krishna CNC Design Studio</h1>
+
+        <p>
+            Turning Your Ideas into Beautiful CNC Designs.
+            Professional 2D & 3D CNC Router Designs,
+            Furniture Designs, Door Carving and Custom
+            CNC TAP Files.
+        </p>
+
+        <a class="btn" href="#gallery">Explore Our Designs</a>
+    </div>
 </div>
+
+<!-- SERVICES -->
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Professional CNC Design Solutions</p>
+
+    <div class="services">
+
+        <div class="service-box">
+            <h3>2D CNC Design</h3>
+            <p>Beautiful and accurate 2D CNC router designs.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>3D CNC Design</h3>
+            <p>Detailed 3D carving designs for CNC machines.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>CNC TAP Files</h3>
+            <p>Custom TAP file creation for CNC router machines.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Photo to CNC Design</h3>
+            <p>Convert your reference photos into CNC designs.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Custom Furniture</h3>
+            <p>Creative furniture and wooden panel designs.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Custom Carving</h3>
+            <p>Special designs according to your requirements.</p>
+        </div>
+
+    </div>
 </section>
 
-<section>
-<div class="title">
-<h2>Welcome to <span>Krishna CNC Design Studio</span></h2>
-<p>Creative CNC Router Designing Solutions</p>
-</div>
-<div class="intro">
-We specialize in professional 2D and 3D CNC router designs,
-wooden door carving, decorative panels, MDF and HDHMR designs,
-mandir, jali and custom furniture designs.
-We turn your ideas and reference photos into detailed CNC designs.
-</div>
+<!-- GALLERY -->
+
+<section id="gallery">
+    <h2 class="section-title">Our Design Gallery</h2>
+    <p class="section-subtitle">
+        Explore our CNC router design collections.
+    </p>
+
+    <div id="allCategories"></div>
 </section>
 
-<section class="dark" id="services">
-<div class="title">
-<h2>Our <span>Services</span></h2>
-<p>Professional CNC Router Design Services</p>
-</div>
-<div class="services">
-<div class="service"><h3>2D CNC Design</h3><p>Accurate 2D patterns, profiles and cutting designs.</p></div>
-<div class="service"><h3>3D CNC Carving</h3><p>Detailed floral, ornamental and decorative relief designs.</p></div>
-<div class="service"><h3>CNC TAP Files</h3><p>Toolpath and TAP file preparation for CNC routers.</p></div>
-<div class="service"><h3>Photo to CNC Design</h3><p>Reference photo based custom design recreation.</p></div>
-<div class="service"><h3>Furniture Designing</h3><p>Custom furniture and decorative wooden designs.</p></div>
-<div class="service"><h3>Door & Panel Design</h3><p>Premium wooden door and decorative panel designs.</p></div>
-</div>
+<!-- ABOUT -->
+
+<section class="about" id="about">
+    <h2 class="section-title">About Krishna CNC</h2>
+
+    <p>
+        Welcome to Krishna CNC Design Studio.
+        We specialize in CNC router 2D and 3D designs,
+        wooden door carving, furniture designs,
+        MDF and HDHMR carving, mandir designs,
+        jali patterns and custom CNC TAP files.
+
+        With 2.5 years of experience, our goal is to
+        turn your ideas and reference images into
+        beautiful and detailed CNC designs.
+
+        We provide custom quotations according to
+        your design requirements.
+    </p>
+
+    <a class="btn" href="#contact">Contact Us</a>
 </section>
 
-<section id="designs">
-<div class="title">
-<h2>Our <span>CNC Design Gallery</span></h2>
-<p>Explore our CNC router design categories</p>
-</div>
-<div id="gallery"></div>
-</section>
-
-<section class="dark">
-<div class="title">
-<h2>How It <span>Works</span></h2>
-<p>Simple process for your custom CNC design</p>
-</div>
-<div class="steps">
-<div class="step"><strong>01</strong><h3>Share Your Idea</h3><p>Send your reference photo, sketch or design requirements.</p></div>
-<div class="step"><strong>02</strong><h3>Design Creation</h3><p>We prepare your custom 2D or 3D CNC design and toolpath.</p></div>
-<div class="step"><strong>03</strong><h3>Final Delivery</h3><p>Receive your approved design files and CNC TAP files.</p></div>
-</div>
-</section>
-
-<section id="about">
-<div class="about">
-<img src="https://images.squarespace-cdn.com/content/v1/55a12d8be4b0bdc9ce0b31da/1702633918729-G02K112JKPN2V3RN90L6/DWC2440-CNC-Router-4_web.jpg?format=2500w" alt="CNC router carving wood">
-<div>
-<h2>About <span>Krishna</span></h2>
-<p>Welcome to Krishna CNC Design Studio. We create detailed CNC router designs for wooden doors, furniture, decorative panels and custom projects.</p>
-<p>Our focus is on precision, detailing and transforming customer ideas into beautiful CNC-ready designs.</p>
-<p><b>Experience:</b> 2.5 Years</p>
-<p><b>Location:</b> Kharar, Punjab, India</p>
-<a class="btn" href="https://www.instagram.com/krishna_cnc_design" target="_blank">Follow Instagram</a>
-</div>
-</div>
-</section>
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-<div class="title">
-<h2>Request a <span>Custom Quote</span></h2>
-<p>Share your project details with us</p>
-</div>
-<form class="form" id="enquiry">
-<label>Your Name<input id="name" required placeholder="Enter your name"></label>
-<label>Email<input id="email" type="email" placeholder="Email address"></label>
-<label>Country<input id="country" placeholder="Your country"></label>
-<label>Select Service
-<select id="service">
-<option>2D CNC Design</option>
-<option>3D CNC Carving</option>
-<option>CNC TAP File</option>
-<option>Wooden Door Design</option>
-<option>MDF / HDHMR Design</option>
-<option>Mandir Design</option>
-<option>Jali Design</option>
-<option>Furniture Design</option>
-<option>Custom Photo Based Design</option>
-</select></label>
-<label>Project Details<textarea id="details" required placeholder="Describe your project..."></textarea></label>
-<label>Upload Reference Image<input id="file" type="file" accept="image/*"></label>
-<button type="submit">Send Enquiry on WhatsApp</button>
-<p style="font-size:12px;color:#aaa">Attach your selected reference image manually after WhatsApp opens.</p>
-</form>
+    <h2 class="section-title">Get a Free Quote</h2>
+    <p class="section-subtitle">
+        Send your requirements and get a custom quotation.
+    </p>
+
+    <div class="contact-box">
+
+        <form id="quoteForm">
+
+            <input type="text" id="customerName"
+            placeholder="Your Name" required>
+
+            <input type="email" id="customerEmail"
+            placeholder="Your Email">
+
+            <input type="text" id="customerCountry"
+            placeholder="Your Country / City">
+
+            <select id="customerService" required>
+                <option value="">Select Design Category</option>
+                <option>Wooden Door Designs</option>
+                <option>3D CNC Carving</option>
+                <option>MDF / HDHMR Designs</option>
+                <option>Mandir Designs</option>
+                <option>Jali Designs</option>
+                <option>Furniture Designs</option>
+                <option>Other CNC Design</option>
+            </select>
+
+            <textarea id="customerDetails"
+            rows="5"
+            placeholder="Describe your design requirements..."
+            required></textarea>
+
+            <button class="btn" type="submit">
+                Send Enquiry on WhatsApp
+            </button>
+
+        </form>
+
+        <p style="color:#aaa; margin-top:15px; line-height:1.6;">
+            Want to send a reference image? First open WhatsApp
+            using the button, then attach your image manually.
+        </p>
+
+    </div>
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-<h2><span>KRISHNA CNC DESIGN STUDIO</span></h2>
-<p>Turning Your Ideas into Beautiful CNC Designs.</p>
-<p>WhatsApp: +91 7717489217</p>
-<p>Email: kri7717489217@gmail.com</p>
-<p>Location: Kharar, Punjab, India</p>
-<p><a style="color:#c9a45c" href="https://www.instagram.com/krishna_cnc_design" target="_blank">Instagram @krishna_cnc_design</a></p>
-<p>© 2026 Krishna CNC Design Studio. All Rights Reserved.</p>
+    <h3 style="color:#d6ad60;">Krishna CNC Design Studio</h3>
+
+    <p>Location: Kharar, Punjab, India</p>
+
+    <p>Phone: +91 7717489217</p>
+
+    <p>
+        Email:
+        <a href="mailto:kri7717489217@gmail.com">
+        kri7717489217@gmail.com</a>
+    </p>
+
+    <p>
+        Instagram:
+        <a href="https://www.instagram.com/krishna_cnc_design"
+        target="_blank">Follow Us</a>
+    </p>
+
+    <p>© 2026 Krishna CNC Design Studio. All Rights Reserved.</p>
 </footer>
 
-<a class="wa" href="https://wa.me/917717489217" target="_blank">WhatsApp Us</a>
+<a class="whatsapp-float"
+href="https://wa.me/917717489217"
+target="_blank">WhatsApp</a>
+
 
 <script>
-const phone="917717489217";
 
-const cncImages=[
-"https://cdn.ai-zero.ai/public/img/2025-09-12/4414489863_0.png",
-"https://images.squarespace-cdn.com/content/v1/55a12d8be4b0bdc9ce0b31da/1702633918729-G02K112JKPN2V3RN90L6/DWC2440-CNC-Router-4_web.jpg?format=2500w",
-"https://www.trend-uk.com/media/catalog/product/cache/63cb3eac13bcf50aa47f852f169e059e/c/n/cnc_1f_feat1_7.jpg",
-"https://woodtec.kz/upload/resize_cache/webp/iblock/05d/05d59636a8f5a8f9941011b1b17eda38.webp",
-"https://ireland.apollo.olxcdn.com/v1/files/fcl5jx5urkae-JOBSPX/image%3Bq%3D80%3Bf%3Djpeg",
-"https://www.peaktimbercraft.com/images/hero_image.png",
-"https://www.stavros.ru/upload/resize_cache/iblock/71d/2bnu4ymdpvbpeypxz6demrommq0d7zn5/716_716_0/IMG_1557.JPG",
-"https://rmwood.ru/upload/iblock/362/5lt1juioxe32qm4go9d0nc2fkhwwxq63.jpg",
-"https://cdn.ai-zero.ai/public/img/2025-09-12/4414489863_0.png",
-"https://www.trend-uk.com/media/catalog/product/cache/63cb3eac13bcf50aa47f852f169e059e/c/n/cnc_1f_feat1_7.jpg"
+/* ==========================================
+   IMAGE SECTION 1: WOODEN DOOR DESIGNS
+   YAHAN SIRF WOODEN DOOR KI IMAGES LAGANA
+========================================== */
+
+const woodenDoorImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
 ];
 
-const categories=[
-"Wooden Door Designs",
-"3D CNC Carving",
-"MDF / HDHMR Designs",
-"Mandir Designs",
-"Jali Designs",
-"Furniture Designs"
+
+/* ==========================================
+   IMAGE SECTION 2: 3D CNC CARVING
+   YAHAN SIRF 3D CARVING KI IMAGES LAGANA
+========================================== */
+
+const carving3DImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
 ];
 
-const gallery=document.getElementById("gallery");
 
-categories.forEach((category,catIndex)=>{
- const heading=document.createElement("div");
- heading.className="title";
- heading.innerHTML=`<h2>${category}</h2><p>CNC router carving and design samples</p>`;
- gallery.appendChild(heading);
+/* ==========================================
+   IMAGE SECTION 3: MDF / HDHMR DESIGNS
+   YAHAN SIRF MDF / HDHMR KI IMAGES LAGANA
+========================================== */
 
- const grid=document.createElement("div");
- grid.className="grid";
+const mdfHdhmrImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+];
 
- cncImages.forEach((src,index)=>{
-  const card=document.createElement("div");
-  card.className="card";
-  const designName=`${category} - Design ${index+1}`;
-  card.innerHTML=`
-   <img src="${src}" alt="${designName}" loading="lazy">
-   <div class="card-info">
-    <h3>${designName}</h3>
-    <p>CNC carving / woodworking sample</p>
-    <a href="https://wa.me/${phone}?text=${encodeURIComponent("Hello, I am interested in "+designName+". Please share details and quotation.")}" target="_blank">ASK PRICE ON WHATSAPP</a>
-   </div>`;
-  grid.appendChild(card);
- });
- gallery.appendChild(grid);
+
+/* ==========================================
+   IMAGE SECTION 4: MANDIR DESIGNS
+   YAHAN SIRF MANDIR KI IMAGES LAGANA
+========================================== */
+
+const mandirImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+];
+
+
+/* ==========================================
+   IMAGE SECTION 5: JALI DESIGNS
+   YAHAN SIRF JALI KI IMAGES LAGANA
+========================================== */
+
+const jaliImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+];
+
+
+/* ==========================================
+   IMAGE SECTION 6: FURNITURE DESIGNS
+   YAHAN SIRF FURNITURE KI IMAGES LAGANA
+========================================== */
+
+const furnitureImages = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+];
+
+
+/* ==========================================
+   GALLERY DISPLAY SYSTEM
+   IS SECTION KO CHANGE NAHI KARNA
+========================================== */
+
+const categories = [
+    {
+        name: "Wooden Door Designs",
+        images: woodenDoorImages
+    },
+    {
+        name: "3D CNC Carving",
+        images: carving3DImages
+    },
+    {
+        name: "MDF / HDHMR Designs",
+        images: mdfHdhmrImages
+    },
+    {
+        name: "Mandir Designs",
+        images: mandirImages
+    },
+    {
+        name: "Jali Designs",
+        images: jaliImages
+    },
+    {
+        name: "Furniture Designs",
+        images: furnitureImages
+    }
+];
+
+const gallery = document.getElementById("allCategories");
+
+categories.forEach((category, categoryIndex) => {
+
+    const section = document.createElement("div");
+    section.className = "category";
+
+    const heading = document.createElement("h3");
+    heading.textContent = category.name;
+
+    const imageGrid = document.createElement("div");
+    imageGrid.className = "gallery";
+
+    category.images.forEach((imageUrl, imageIndex) => {
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        let imageArea;
+
+        if (imageUrl.trim() !== "") {
+
+            imageArea = document.createElement("img");
+            imageArea.src = imageUrl;
+            imageArea.alt = category.name + " " + (imageIndex + 1);
+            imageArea.loading = "lazy";
+
+            imageArea.onerror = function() {
+                const placeholder = document.createElement("div");
+                placeholder.className = "no-image";
+                placeholder.textContent = "Image link not working";
+                this.replaceWith(placeholder);
+            };
+
+        } else {
+
+            imageArea = document.createElement("div");
+            imageArea.className = "no-image";
+            imageArea.textContent =
+                "Add " + category.name + " Image " + (imageIndex + 1);
+        }
+
+        const info = document.createElement("div");
+        info.className = "card-info";
+
+        const title = document.createElement("h4");
+        title.textContent = category.name + " " + (imageIndex + 1);
+
+        const button = document.createElement("a");
+        button.href = "https://wa.me/917717489217?text=" +
+            encodeURIComponent(
+                "Hello, I am interested in " +
+                category.name + " - Design " + (imageIndex + 1) +
+                ". Please share the price."
+            );
+
+        button.target = "_blank";
+        button.textContent = "Ask Price on WhatsApp";
+
+        info.appendChild(title);
+        info.appendChild(button);
+
+        card.appendChild(imageArea);
+        card.appendChild(info);
+
+        imageGrid.appendChild(card);
+    });
+
+    section.appendChild(heading);
+    section.appendChild(imageGrid);
+
+    gallery.appendChild(section);
 });
 
-document.getElementById("enquiry").addEventListener("submit",function(e){
- e.preventDefault();
- const msg=`Hello Krishna CNC Design Studio!
-Name: ${name.value}
-Email: ${email.value}
-Country: ${country.value}
-Service: ${service.value}
-Details: ${details.value}
-I can attach my reference image separately on WhatsApp.`;
- window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),"_blank");
+
+/* ==========================================
+   WHATSAPP ENQUIRY FORM
+========================================== */
+
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value;
+    const email = document.getElementById("customerEmail").value;
+    const country = document.getElementById("customerCountry").value;
+    const service = document.getElementById("customerService").value;
+    const details = document.getElementById("customerDetails").value;
+
+    const message =
+        "Hello Krishna CNC Design Studio!\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Country/City: " + country + "\n" +
+        "Service: " + service + "\n" +
+        "Requirements: " + details + "\n\n" +
+        "Please share the quotation.";
+
+    const whatsappURL =
+        "https://wa.me/917717489217?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
 });
 
-let hindi=false;
-function toggleLang(){
- hindi=!hindi;
- document.getElementById("language").textContent=hindi?"English":"हिन्दी";
- document.querySelectorAll("[data-en]").forEach(el=>{
-  el.textContent=hindi?el.dataset.hi:el.dataset.en;
- });
-}
 </script>
+
 </body>
 </html>

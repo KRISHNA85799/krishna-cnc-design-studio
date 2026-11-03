@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment | Krishna CNC Design Studio</title>
+<style>
+:root {
+    --cream: #f7f3eb;
+    --gold: #b68b45;
+    --dark: #40372d;
+    --text: #655b50;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    text-align: center;
+}
+header {
+    background: #fff;
+    padding: 22px 15px;
+    box-shadow: 0 3px 15px #0000000d;
+}
+header h1 { color: var(--gold); font-size: 25px; }
+header p { margin-top: 7px; color: var(--text); }
+.payment-card {
+    width: min(92%, 480px);
+    margin: 45px auto;
+    padding: 30px 22px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 22px #00000012;
+}
+h2 { color: var(--gold); margin-bottom: 12px; }
+p { line-height: 1.7; color: var(--text); }
+.qr-frame {
+    display: inline-block;
+    margin: 22px 0;
+    padding: 12px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    background: #fff;
+}
+.qr-frame img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    min-height: 100px;
+    object-fit: contain;
+}
+.small-note { font-size: 13px; margin-top: 12px; }
+.button {
+    display: inline-block;
+    margin: 12px 6px 0;
+    padding: 13px 20px;
+    background: var(--gold);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.button.dark { background: var(--dark); }
+footer {
+    margin-top: 45px;
+    padding: 22px;
+    background: var(--dark);
+    color: #fff;
+}
+footer p { color: #fff; }
+</style>
+</head>
+<body>
+<header>
+    <h1>KRISHNA CNC DESIGN STUDIO</h1>
+    <p>Secure Payment</p>
+</header>
+
+<main class="payment-card">
+    <h2>Make a Payment</h2>
+    <p>Thank you for choosing Krishna CNC Design Studio.
+       Scan the QR code below using your UPI payment app.</p>
+
+    <div class="qr-frame">
+        <!-- Replace the image URL below with your QR code's ImgBB Direct Link -->
+        <img src="PASTE_YOUR_QR_IMAGE_DIRECT_LINK_HERE"
+             alt="Krishna CNC Design Studio payment QR code">
+    </div>
+
+    <p><strong>Scan &amp; Pay using any UPI app</strong></p>
+    <p class="small-note">
+        Before paying, check that the recipient name and UPI details
+        shown in your payment app are correct.
+    </p>
+    <p class="small-note">
+        After payment, send your payment screenshot on WhatsApp.
+        Payment is confirmed only after it is checked.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/917717489217?text=Hello%20Krishna%20CNC%20Design%20Studio%2C%20I%20have%20made%20a%20payment.%20I%20will%20share%20the%20screenshot%20for%20verification."
+       target="_blank" rel="noopener">Send Payment Screenshot</a>
+
+    <br>
+    <a class="button dark" href="index.html">Back to Home</a>
+</main>
+
+<footer>
+    <p>Krishna CNC Design Studio | Kharar, Punjab, India</p>
+    <p>WhatsApp: +91 7717489217</p>
+</footer>
+</body>
+</html>
